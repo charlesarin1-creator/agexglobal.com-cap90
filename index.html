@@ -1,0 +1,453 @@
+<!--
+File name: /cap90/index.html
+Purpose: Landing page for The Steward Standard™ — Executive Identity 90
+Hosting: GitHub Pages (agexglobal.com/cap90)
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0B1F3B" />
+  <title>The Steward Standard™ — Executive Identity 90</title>
+  <meta name="description" content="A 90-day executive reconstruction system delivered by The Charles Inyam Arin Executive Institute under AGEx Grand Plaza. Build the man. The results follow." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="The Steward Standard™ — Executive Identity 90" />
+  <meta property="og:description" content="Build the man. The results follow. 90-day executive formation with day-by-day progression." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://agexglobal.com/cap90/" />
+  <!-- Optional: add an image later -->
+  <!-- <meta property="og:image" content="assets/og.png" /> -->
+
+  <style>
+    :root{
+      --navy:#0B1F3B;
+      --gold:#C9A227;
+      --white:#F8F8F8;
+      --muted: rgba(248,248,248,.78);
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.10);
+      --border: rgba(255,255,255,.14);
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1120px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--white);
+      background:
+        radial-gradient(1000px 600px at 12% 0%, rgba(201,162,39,.18), transparent 55%),
+        radial-gradient(900px 600px at 88% 10%, rgba(255,255,255,.07), transparent 50%),
+        linear-gradient(180deg, #07162d 0%, var(--navy) 55%, #07162d 100%);
+      line-height:1.55;
+    }
+
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 80px}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:10px 0 22px;
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:4px;
+    }
+    .brand .kicker{
+      font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+    }
+    .brand .name{
+      font-size:16px; font-weight:650;
+    }
+    .links{
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border:1px solid var(--border); border-radius:999px;
+      background: rgba(255,255,255,.04);
+      text-decoration:none; font-size:13px; color:var(--muted);
+    }
+    .pill:hover{background: rgba(255,255,255,.07); color:var(--white)}
+
+    /* HERO */
+    .hero{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:18px;
+      align-items:stretch;
+      margin-top:10px;
+    }
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr; }
+    }
+
+    .panel{
+      background: linear-gradient(180deg, var(--card) 0%, rgba(255,255,255,.04) 100%);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:22px;
+    }
+
+    .title{
+      margin:0 0 6px;
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      font-weight: 700;
+      letter-spacing: .01em;
+      font-size: 38px;
+      line-height:1.15;
+    }
+    .subtitle{
+      margin:0 0 16px;
+      color: rgba(248,248,248,.9);
+      font-size:16px;
+      max-width: 62ch;
+    }
+    .badgeRow{
+      display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 16px;
+    }
+    .badge{
+      border:1px solid rgba(201,162,39,.35);
+      background: rgba(201,162,39,.10);
+      color: rgba(248,248,248,.9);
+      border-radius:999px;
+      padding:7px 10px;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .ctaRow{
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:16px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 16px; border-radius: 12px;
+      text-decoration:none; font-weight:650;
+      border:1px solid transparent;
+      transition: transform .08s ease, background .2s ease;
+      user-select:none;
+    }
+    .btn:active{transform: translateY(1px);}
+    .btnPrimary{
+      background: var(--gold);
+      color:#0b1f3b;
+      border-color: rgba(0,0,0,.08);
+    }
+    .btnPrimary:hover{background: #d8b23a;}
+    .btnSecondary{
+      background: rgba(255,255,255,.06);
+      color: var(--white);
+      border-color: var(--border);
+    }
+    .btnSecondary:hover{background: rgba(255,255,255,.09);}
+    .fineprint{
+      margin:10px 0 0;
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+
+    /* VIDEO */
+    .videoTitle{
+      margin:0 0 10px;
+      font-weight:650;
+      font-size:14px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color: rgba(248,248,248,.85);
+    }
+    .videoWrap{
+      border-radius: 16px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.25);
+      aspect-ratio: 16 / 9;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+    }
+    .videoWrap video{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+      background: rgba(0,0,0,.35);
+    }
+    .videoOverlay{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      pointer-events:none;
+      background: linear-gradient(180deg, rgba(0,0,0,.18) 0%, rgba(0,0,0,.30) 100%);
+      opacity:0;
+      transition: opacity .2s ease;
+    }
+    .videoWrap[data-hasvideo="false"] .videoOverlay{opacity:1}
+    .overlayBox{
+      text-align:center;
+      max-width: 42ch;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px dashed rgba(201,162,39,.5);
+      background: rgba(11,31,59,.55);
+    }
+    .overlayBox strong{
+      display:block;
+      font-size:14px;
+      margin-bottom:6px;
+      color: rgba(248,248,248,.95);
+    }
+    .overlayBox span{
+      display:block;
+      font-size:12.5px;
+      color: var(--muted);
+    }
+
+    /* SECTIONS */
+    .section{
+      margin-top:18px;
+      padding: 22px;
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.045);
+    }
+    .h2{
+      margin:0 0 10px;
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      font-size: 22px;
+      letter-spacing:.01em;
+    }
+    .p{margin:0; color: rgba(248,248,248,.86)}
+    .grid3{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 920px){ .grid3{grid-template-columns:1fr;} }
+    .card{
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+    }
+    .card h3{
+      margin: 0 0 6px;
+      font-size: 14px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color: rgba(248,248,248,.92);
+    }
+    .card p{margin:0; color: var(--muted); font-size: 13.5px}
+
+    .list{
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: rgba(248,248,248,.88);
+    }
+    .list li{margin: 6px 0; color: var(--muted)}
+    .divider{
+      height:1px;
+      background: rgba(255,255,255,.10);
+      margin: 16px 0;
+    }
+
+    footer{
+      margin-top: 18px;
+      padding: 18px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .footerRow{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 14px;
+      flex-wrap:wrap;
+    }
+    .mutedSmall{font-size:12.5px; color: var(--muted)}
+    .gold{color: rgba(201,162,39,.95)}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="kicker">AGEx Grand Plaza</div>
+        <div class="name">The Charles Inyam Arin Executive Institute</div>
+      </div>
+
+      <div class="links">
+        <a class="pill" href="https://t.me/stewardstandard" target="_blank" rel="noopener">Telegram</a>
+        <a class="pill" href="#structure">Program Structure</a>
+        <a class="pill" href="#access">Access</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <!-- Left: Copy -->
+      <div class="panel">
+        <h1 class="title">The Steward Standard™</h1>
+        <p class="subtitle">
+          <strong>Executive Identity 90</strong> — a 90-day executive reconstruction system for ambitious individuals who require structure before expansion.
+        </p>
+
+        <div class="badgeRow">
+          <span class="badge">Identity</span>
+          <span class="badge">Discipline</span>
+          <span class="badge">Authority</span>
+          <span class="badge">Continuity</span>
+        </div>
+
+        <p class="p" style="margin-top:6px;">
+          <span class="gold" style="font-weight:650;">Build the man.</span> The results follow.
+        </p>
+
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="https://paystack.shop/pay/cap90" target="_blank" rel="noopener">
+            Begin Executive Formation
+          </a>
+          <a class="btn btnSecondary" href="#structure">View Structure</a>
+        </div>
+
+        <p class="fineprint">
+          Founding Executive Access: <strong>$19.90</strong> (limited phase). One-time payment for the 90-day system.
+        </p>
+
+        <div class="divider"></div>
+
+        <p class="p">
+          Delivered by <strong>The Charles Inyam Arin Executive Institute</strong> under <strong>AGEx Grand Plaza</strong>.
+          Faith-neutral in language. Aligned in standard.
+        </p>
+      </div>
+
+      <!-- Right: Video -->
+      <div class="panel">
+        <div class="videoTitle">60-second briefing</div>
+
+        <!--
+          Add your video file here:
+          1) Put it at /cap90/assets/briefing.mp4 (recommended)
+          2) Update the src below to "assets/briefing.mp4"
+        -->
+        <div class="videoWrap" id="videoWrap" data-hasvideo="false">
+          <video id="briefingVideo" controls playsinline preload="metadata">
+            <!-- Example: <source src="assets/briefing.mp4" type="video/mp4" /> -->
+          </video>
+
+          <div class="videoOverlay">
+            <div class="overlayBox">
+              <strong>Upload your 60-second video</strong>
+              <span>Place it at <code>cap90/assets/briefing.mp4</code> and set the video source.</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="fineprint" style="margin-top:12px;">
+          Keep it calm. One message: the standard. The structure. The invitation.
+        </p>
+      </div>
+    </div>
+
+    <!-- Problem -->
+    <section class="section" id="problem">
+      <h2 class="h2">Potential without structure becomes frustration.</h2>
+      <p class="p">
+        Many ambitious individuals are not lacking intelligence.
+        They are lacking repeatable systems: nervous system control, disciplined routines, composed communication, and strategic execution.
+      </p>
+      <p class="p" style="margin-top:10px;">
+        This program does not add motivation. It reconstructs identity through daily formation.
+      </p>
+    </section>
+
+    <!-- What this is -->
+    <section class="section" id="structure">
+      <h2 class="h2">This is executive formation.</h2>
+      <p class="p">
+        The Steward Standard™ trains five systems simultaneously: cognitive discipline, emotional regulation, voice authority, revenue consistency, and embodied composure.
+      </p>
+
+      <div class="grid3" style="margin-top:14px;">
+        <div class="card">
+          <h3>Phase I — Stabilize</h3>
+          <p>Days 1–30: internal control, nervous system regulation, self-governance and daily proof of discipline.</p>
+        </div>
+        <div class="card">
+          <h3>Phase II — Elevate</h3>
+          <p>Days 31–60: executive expression, communication clarity, public presence with control, revenue discipline.</p>
+        </div>
+        <div class="card">
+          <h3>Phase III — Position</h3>
+          <p>Days 61–90: authority positioning, asset creation, strategic leverage, continuity-driven execution.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mechanics -->
+    <section class="section" id="access">
+      <h2 class="h2">How it works</h2>
+      <ul class="list">
+        <li><strong>One-time payment</strong> grants 90-day access at the founding rate.</li>
+        <li><strong>Day-by-day progression</strong>: lessons unlock every 24 hours.</li>
+        <li><strong>No skipping</strong>: the system is sequential by design.</li>
+        <li><strong>Grace + consequence</strong>: miss up to 3 days and continue; extended absence can trigger a restart.</li>
+        <li><strong>Daily submission</strong>: reflection + compliance tracking.</li>
+        <li><strong>Certificate</strong> issued upon completion.</li>
+        <li><strong>Hybrid layer</strong>: Telegram for public updates; WhatsApp for in-house members after enrollment.</li>
+      </ul>
+
+      <div class="ctaRow" style="margin-top:14px;">
+        <a class="btn btnPrimary" href="https://paystack.shop/pay/cap90" target="_blank" rel="noopener">
+          Secure Founding Access
+        </a>
+        <a class="btn btnSecondary" href="https://t.me/stewardstandard" target="_blank" rel="noopener">
+          Join Telegram Updates
+        </a>
+      </div>
+
+      <p class="fineprint" style="margin-top:12px;">
+        Note: WhatsApp access is released inside the member dashboard after enrollment.
+      </p>
+    </section>
+
+    <footer>
+      <div class="footerRow">
+        <div>
+          <div><strong>The Charles Inyam Arin Executive Institute</strong></div>
+          <div class="mutedSmall">Under AGEx Grand Plaza</div>
+          <div class="mutedSmall" style="margin-top:8px;">© <span id="yr"></span> All rights reserved.</div>
+        </div>
+
+        <div style="text-align:right;">
+          <div class="mutedSmall">Public channel:</div>
+          <div><a class="gold" href="https://t.me/stewardstandard" target="_blank" rel="noopener">t.me/stewardstandard</a></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Set year
+    document.getElementById("yr").textContent = new Date().getFullYear();
+
+    // Video presence check (shows overlay if no <source> is provided)
+    (function(){
+      const video = document.getElementById("briefingVideo");
+      const wrap = document.getElementById("videoWrap");
+      const hasSource = video.querySelector("source") !== null;
+      wrap.setAttribute("data-hasvideo", hasSource ? "true" : "false");
+    })();
+  </script>
+</body>
+</html>
